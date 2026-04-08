@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Завантаження документів</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+
+<body>
+  <h1>Завантажити документи</h1>
+  <form action="/upload-docs" method="POST" enctype="multipart/form-data">
+    <div>
+      <label for="avatar">Аватар:</label>
+      <input type="file" id="avatar" name="avatar">
+    </div>
+    <div>
+      <label for="documents">Документи (до 3):</label>
+      <input type="file" id="documents" name="documents" multiple>
+    </div>
+    <button type="submit">Завантажити</button>
+  </form>
+</body>
+
+</html>

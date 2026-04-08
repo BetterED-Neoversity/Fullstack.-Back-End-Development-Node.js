@@ -1,0 +1,3 @@
+setImmediate((name, age) => {
+  console.log(`Name: ${name}, Age: ${age}`);
+}, 'Alice', 25);

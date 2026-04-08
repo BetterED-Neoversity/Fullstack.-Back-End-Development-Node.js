@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Завантаження файлів</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+
+<body>
+  <h1>Завантажити фотографії</h1>
+  <form action="/upload-multiple" method="POST" enctype="multipart/form-data">
+    <div>
+      <label for="photos">Виберіть файли (до 5):</label>
+      <input type="file" id="photos" name="photos" multiple>
+    </div>
+    <button type="submit">Завантажити</button>
+  </form>
+</body>
+
+</html>

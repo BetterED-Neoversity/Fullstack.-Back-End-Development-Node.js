@@ -1,0 +1,24 @@
+<%- include('partials/header', { title: 'Каталог книг' }) %>
+  <%- include('partials/navbar') %>
+
+    <main>
+      <h1>Каталог книг</h1>
+
+      <% if (books.length===0) { %>
+        <p>Книг поки що немає</p>
+        <% } else { %>
+          <ul>
+            <% for (const book of books) { %>
+              <li class="<%= book.year < 1900 ? 'old-book' : '' %>">
+                <strong>
+                  <%= book.title %>
+                </strong> - <%= book.author %> (<%= book.year %>)
+              </li>
+              <% } %>
+          </ul>
+          <p>Всього книг: <%= books.length %>
+          </p>
+          <% } %>
+    </main>
+
+    <%- include('partials/footer') %>
