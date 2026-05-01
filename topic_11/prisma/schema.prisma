@@ -11,3 +11,31 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model User {
+  id           String    @id @default(cuid())
+  username     String    @unique
+  passwordHash String
+  createdAt    DateTime  @default(now())
+  sessions     Session[]
+  messages     Message[]
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  text      String
+  roomName  String
+  createdAt DateTime @default(now())
+  authorId  String
+
+  author User @relation(fields: [authorId], references: [id], onDelete: Cascade)
+}
