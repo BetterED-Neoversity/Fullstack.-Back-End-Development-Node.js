@@ -1,4 +1,4 @@
-# Fullstack. Back End Development: Node.js — навчальні приклади (магістратура)
+# FullStack BackEnd Development: Node.js — навчальні приклади (магістратура)
 
 Репозиторій навчальних прикладів курсу Fullstack. Back End Development: Node.js. Теми розбиті по тижнях; кожна тека містить власний `README.md` з описом файлів і командами запуску.
 
